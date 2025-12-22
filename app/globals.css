@@ -8,8 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-work: var(--font-work-sans);
+  --font-mona: var(--font-mona-sans);
+  --color-dark: #171717;
+  --color-light: #3d3d3d;
+  --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030,
+    0 2px 4px #00000015;
+  --shadow-md: inset 0 1px 2px #ffffff50, 0 1px 2px #00000030,
+    0 4px 8px #00000015;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +28,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-work);
+}
+
+.nav-item:nth-child(8) {
+  position: relative;
+  margin-bottom: 2rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 140%;
+    left: 0;
+    width: 100%;
+    border-radius: 100%;
+    height: 2px;
+    background-color: #3d3d3d;
+  }
+}
+
+.head-button {
+  @apply p-3 bg-dark rounded-xl cursor-pointer hover:bg-light;
+
+  &.active {
+    @apply bg-white text-black hover:bg-gray-200;
+  }
 }
