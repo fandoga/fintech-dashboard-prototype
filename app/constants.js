@@ -1,7 +1,7 @@
 export const datalistUp = [
   {
     name: "Montly earning",
-    value: 12678,
+    value: "$" + 12678,
   },
   {
     name: "New clients",
@@ -9,11 +9,11 @@ export const datalistUp = [
   },
   {
     name: "Montly losses",
-    value: 7211,
+    value: "$" + 7211,
   },
   {
     name: "Monthly profit",
-    value: 5467,
+    value: "$" + 5467,
   },
 ];
 
