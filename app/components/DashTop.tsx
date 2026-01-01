@@ -3,7 +3,7 @@ import { datalistUp } from "../constants";
 
 const DashTop = () => {
   return (
-    <div className="flex justify-between gap-2 items-center">
+    <div className="flex justify-between gap-2 col-span-full items-center">
       {datalistUp.map((data) => (
         <div
           className="bg-light p-4 w-full rounded-2xl shadow-s"

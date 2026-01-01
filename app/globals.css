@@ -55,5 +55,9 @@ body {
 }
 
 .apexcharts-tooltip {
-  width: 400px;
+  width: 200px;
+}
+
+.orders {
+  scrollbar-color: white white;
 }

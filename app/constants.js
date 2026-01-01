@@ -229,3 +229,54 @@ export const navlist = [
     ),
   },
 ];
+
+export const orders = [
+  {
+    id: 262,
+    date: "01.01.2026",
+    status: "Pending",
+    total: 110,
+  },
+  {
+    id: 524,
+    date: "31.12.2025",
+    status: "Ready",
+    total: 441,
+  },
+  {
+    id: 14,
+    date: "28.12.2025",
+    status: "Ready",
+    total: 678,
+  },
+  {
+    id: 112,
+    date: "28.12.2025",
+    status: "Canceled",
+    total: 167,
+  },
+  {
+    id: 412,
+    date: "25.12.2025",
+    status: "Ready",
+    total: 781,
+  },
+  {
+    id: 211,
+    date: "24.12.2025",
+    status: "Ready",
+    total: 312,
+  },
+  {
+    id: 98,
+    date: "21.12.2025",
+    status: "Ready",
+    total: 78,
+  },
+  {
+    id: 187,
+    date: "20.12.2025",
+    status: "Ready",
+    total: 505,
+  },
+];

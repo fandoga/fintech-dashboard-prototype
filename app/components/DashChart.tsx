@@ -1,9 +1,7 @@
-"use client";
-
 import React, { useEffect, useRef } from "react";
-import { chartOptions } from "../charts";
+import { barOptions } from "../charts";
 
-const DashGraph = () => {
+const DashChart = () => {
   const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -11,7 +9,7 @@ const DashGraph = () => {
       let chart: { destroy: () => void; render: () => void } | null = null;
 
       import("apexcharts").then((ApexCharts) => {
-        chart = new ApexCharts.default(chartRef.current, chartOptions);
+        chart = new ApexCharts.default(chartRef.current, barOptions);
         chart.render();
       });
 
@@ -25,11 +23,10 @@ const DashGraph = () => {
 
   return (
     <div className="bg-light rounded-2xl shadow-s p-4 col-span-5">
-      <p className="text-sm opacity-50 mb-3">Total revenue</p>
-      <h3 className="text-3xl font-semibold">$250.8k</h3>
+      <p className="text-sm opacity-50 mb-3">Total profit</p>
       <div ref={chartRef}></div>
     </div>
   );
 };
 
-export default DashGraph;
+export default DashChart;

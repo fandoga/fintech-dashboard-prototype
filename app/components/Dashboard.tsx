@@ -1,6 +1,10 @@
 import React from "react";
 import DashTop from "./DashTop";
 import DashGraph from "./DashGraph";
+import DashPie from "./DashPie";
+import DashChart from "./DashChart";
+import DashMessages from "./DashOrders";
+import DashOrders from "./DashOrders";
 
 const Dashboard = () => {
   return (
@@ -18,9 +22,12 @@ const Dashboard = () => {
           <button className="head-button active">Create report</button>
         </div>
       </div>
-      <div className="bg-dark p-[12px] mx-[-12px] rounded-xl flex flex-col gap-3">
+      <div className="bg-dark p-[12px] mx-[-12px] rounded-xl grid grid-cols-8 grid-row-3 gap-3">
         <DashTop />
         <DashGraph />
+        <DashPie />
+        <DashChart />
+        <DashOrders />
       </div>
     </section>
   );
