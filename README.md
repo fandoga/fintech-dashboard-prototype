@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## FinTech Dashboard
 
-## Getting Started
+Прототип дешбоарда для фин-тех сервиса, с отслеживанием и управлением финансовой состовляющей огранизации.
 
-First, run the development server:
+
+### Возможности
+
+- **График финансов и клиентов** позволяющий следить за отношением прибыли к новым клиентам.
+- **Реферальная статистика** (SVG/изображение), показывающая кол-во рефералов, выплаченные им бонусы и общую выгоду.
+- **Чарты доходов и убытков**, где можно отследить в каком месяце была наибольшая прибыль.
+- **Блок заказов** где видна сумма, дата и статус всех заказов.
+
+---
+
+## Технологический стек
+
+- **React** — UI и компонентный подход.
+- **NextJS** — сборка, ssr-рендеринг, dev сервер
+- **GSAP** — анимации при старте страницы
+- **Tailwind CSS / utility-first классы** — стилизация через классы в JSX.
+- **ESLint** — базовый линтинг кода.
+- **TypeScript (ESNext)**.
+- **Apex Charts** — чарты и графики на странице.
+
+---
+
+## Структура проекта
+
+- `app/page.tsx` — корневой компонент приложения.
+- `app/globals.css` / `app/constants.js` — глобальные стили и мок-данные.
+- `app/components` — компоненты.
+- `app/animations` — gsap-анимации и таймлайны.
+- `app/charts.ts` / `app/hooks` — параметры для графиков и кастомные хуки.
+
+
+---
+
+## Установка и запуск
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/fandoga/fintech-dashboard-prototype.git
+cd fintech-dashboard-prototype
+```
+
+### 2. Установка зависимостей
+
+```bash
+npm install
+# или
+yarn
+# или
+pnpm install
+```
+
+### 3. Запуск dev-сервера
 
 ```bash
 npm run dev
-# or
+# или
 yarn dev
-# or
+# или
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+После запуска открой:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:5173
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+(порт может отличаться).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Сборка и предпросмотр production-версии
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Сборка
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+# или
+yarn build
+# или
+pnpm build
+```
 
-## Deploy on Vercel
+Результат попадёт в папку `dist/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Локальный предпросмотр production-сборки
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run preview
+# или
+yarn preview
+# или
+pnpm preview
+```
