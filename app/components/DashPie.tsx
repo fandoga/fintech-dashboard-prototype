@@ -4,7 +4,7 @@ const DashPie = () => {
   return (
     <div className="bg-light rounded-2xl shadow-s p-4 col-span-3">
       <p className="text-sm opacity-50 mb-3">Referral Tracking</p>
-      <div className="flex items-center gap-[10%]">
+      <div className="flex items-center gap-[10%] h-full pb-6">
         <div className="flex flex-col gap-9 pl-2">
           <div className="shadow-s rounded-xl p-3">
             <p className="opacity-50">Invited</p>

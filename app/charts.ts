@@ -1,4 +1,4 @@
-export const chartOptions = {
+export const getChartOptions = (height: number = 350) => ({
   series: [
     {
       name: "Profit",
@@ -10,7 +10,7 @@ export const chartOptions = {
     },
   ],
   chart: {
-    height: 350,
+    height,
     type: "area" as const,
     background: "transparent",
     stacked: true,
@@ -60,7 +60,11 @@ export const chartOptions = {
       "Dec",
     ],
   },
-};
+});
+
+// Для обратной совместимости (если где-то используется старый экспорт)
+export const chartOptions = getChartOptions();
+
 export const barOptions = {
   series: [
     {
